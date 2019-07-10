@@ -6,3 +6,5 @@ Some of the tasks is just a simple pyhton script (file ending in .py). Its best 
 
 Other files are jupyter notebook files (file ending in .ipynb). To open these, open anaconda command prompt, cd into the pysesh folder, and run `jupyter notebook`. This will open a webpage which will allow you to navigate through the files and open the notebook you want.
 
+
+PS: to connect anaconda to pycharm, at somepoint you need to enter the location of python interpreter. Mine was based at C:\Users\e.cemal\AppData\Local\Continuum\anaconda3\python.exe.
