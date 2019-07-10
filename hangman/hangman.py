@@ -14,8 +14,9 @@ word_list = TECHMODAL_MISSION_STATEMENT.split()
 word_list = [x.lower() for x in word_list if len(x) >= 4] # filter for words with 4 letters or more
 
 print(word_list)
+print()
 
 word = 'test'
-guessed_word = input('Enter your guess:')
-if word == guessed_word:
-    print("you guessed right")
+guessed_letter = input('Enter your guess:')
+if guessed_letter in word:
+    print("yes, " + guessed_letter + "is in the word")
