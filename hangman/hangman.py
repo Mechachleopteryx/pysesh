@@ -16,6 +16,6 @@ word_list = [x.lower() for x in word_list if len(x) >= 4] # filter for words wit
 print(word_list)
 
 word = 'test'
-guessed_word = input()
+guessed_word = input('Enter your guess:')
 if word == guessed_word:
     print("you guessed right")
