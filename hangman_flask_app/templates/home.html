@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A title</title>
+</head>
+
+<body>
+<h1> HANGMAN GAME</h1>
+
+<!-- This is a comment -->
+<!-- notice we are passing arguments from flask into this html template via {{number_of_guesses}} -->
+Number of guesses: {{number_of_guesses}}
+<br>
+
+<!-- I created the input and submission text boxes  so you dont have to worry about that -->
+<form method="POST">
+    Guess a letter:
+    <input name="text">
+    <input type="submit">
+</form>
+<br>
+<!-- url_for() function dynamically creates an url which will look like https://localhost:5000/reset -->
+<!-- note that here 'reset' is the name of the function from app.py -->
+<a href={{ url_for('reset') }}>RESET</a>
+</body>
+</html>
