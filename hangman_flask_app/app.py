@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-# the secret key is used to encode the session. The session ()
+# the secret key is used to encode the session so no malicous third party can see/manipulate anyone's session
 
 TECHMODAL_MISSION_STATEMENT = """
 The mission of Techmodal is to maintain its outstanding
@@ -23,7 +23,7 @@ def initilase(sesh):
     return sesh
 
 @app.route("/", methods=['GET','POST'])
-def hagnman():
+def home_page_func():
     print(session)
 
     # if session is empty, initialise it
@@ -47,8 +47,8 @@ def hagnman():
     return render_template('home.html', number_of_guesses=number_of_guesses)
 
 @app.route('/reset')
-def reset():
+def reset_func():
     # this will delete everything from session.
     session.clear()
-    # this redirects you to the url for the hangman() function above.
-    return redirect(url_for('hagnman'))
+    # this redirects you to the url for the home_page_func() function above.
+    return redirect(url_for('home_page_func'))
